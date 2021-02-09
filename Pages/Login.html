@@ -6,41 +6,44 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="../Documentation/Login.css" rel="stylesheet">
     <title>Login Page</title>
+    <style>
+    body {
+      background-color: lightskyblue;
+  }
+  .main{
+    margin: 100px 0px 70px 0px;
+    text-align: center;
+    color: rgb(6, 0, 78);
+  }
+  #login {
+background:lightskyblue;
+text-align: center;
+font-size: large;
+border-style: double;
+width:20%;
+margin:auto;
+border-width:thick;
+border-radius: 20px;
+padding:30px 30px 30px 30px;
+}
+
+    </style>
     </head>
 <body>
-
+    <h2>The Early Learning Game</h2>
 <div class="main">  
     <!-- This Form is for the user to login to the website -->
-        <div id="login">
-            <h3 class="text-center text-white pt-5">Early Learning Game</h3>
-            <div class="container">
-                <div id="login-row" class="row justify-content-center align-items-center">
-                    <div id="login-column" class="col-md-6">
-                        <div id="login-box" class="col-md-12">
+    <h1>Login</h1>
+            <div id="login">
                             <form id="login-form" class="form" action="Login.php" method="post">
-                                <h3 class="text-center text-info">Login</h3>
-                                <div class="form-group">
-                                    <label for="Username" class="text-info">Username:</label><br>
-                                    <input type="text" name="Username" id="Username" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <label for="Password" class="text-info">Password:</label><br>
-                                    <input type="text" name="Password" id="Password" class="form-control">
-                                </div>
-                                <div class="form-group">
-                                    <br>
-                                    <input type="submit" id="submit" name="submit" class="btn btn-info btn-md" value="Submit">
-                                </div>
-                                <div class="form-group">
-                                    <br>
+                                    <label for="Username">Username:</label>
+                                    <input type="text" name="Username" id="Username"><br><br>
+                                    <label for="Password">Password:</label>
+                                    <input type="text" name="Password" id="Password"><br><br>
+                                    <input type="submit" id="submit" name="submit" value="Submit"><br><br>
                                     <a href="Signup.html">Create Account</a>
-                                </div>
                             </form>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
     </body>
     </html>
