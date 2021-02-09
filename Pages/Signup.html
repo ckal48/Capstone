@@ -5,7 +5,29 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="../Documentation/Login.css" rel="stylesheet">
-    <title>Login Page</title>
+    <title>Signup Page</title>
+
+    <style>
+      body {
+    background-color: lightskyblue;
+    }
+    .main{
+    margin: 100px 0px 70px 0px;
+    text-align: center;
+    color: rgb(6, 0, 78);
+  }
+      #sign {
+background:lightskyblue;
+text-align: center;
+font-size: large;
+border-style: double;
+width:20%;
+margin:auto;
+border-width:thick;
+border-radius: 20px;
+padding:30px 30px 30px 30px;
+}
+    </style>
     </head>
 
 <script>
@@ -97,15 +119,12 @@
     </script>
 
 <body>
-
+  <h2>The Early Learning Game</h2>
 <div class="main">  
-
             <!-- This Form is for signing up for the website -->
+            <h1 style="text-align:center;">Create Account</h1>
     <div id="sign">
-        <h1>Signup</h1>
-        <h2>Early Learning Game</h2>
-        <h3>Create Account</h3>
-        <form id="sign" class="form" action="Signup.php" onsubmit="return clientValidation()" method="post">
+        <form id="sign-form" class="form" action="Signup.php" onsubmit="return clientValidation()" method="post">
         <input type="hidden" name="Signup" value="1"/>
          <label for="firstname">First Name:</label>
          <input type="text" id="firstname" name="firstname"/><br><br>
