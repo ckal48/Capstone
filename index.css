@@ -1,0 +1,31 @@
+body {
+    background-color: lightskyblue;
+}
+.main{
+  margin: 100px 0px 70px 0px;
+  text-align: center;
+  color: rgb(6, 0, 78);
+}
+#login {
+background:lightskyblue;
+text-align: center;
+font-size: large;
+border-style: double;
+width:20%;
+margin:auto;
+border-width:thick;
+border-radius: 20px;
+padding:30px 30px 30px 30px;
+}
+
+#sign {
+    background:lightskyblue;
+    text-align: center;
+    font-size: large;
+    border-style: double;
+    width:20%;
+    margin:auto;
+    border-width:thick;
+    border-radius: 20px;
+    padding:30px 30px 30px 30px;
+    }

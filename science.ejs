@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="../Documentation/Stylesheet1.css" rel="stylesheet">
+    <style>
+         #navigation {
+  margin: 0px 0px 70px 0px;
+  padding: 0 1em;
+  background:lightsteelblue;
+  height: 3em;
+  list-style: none;
+  text-align: center;
+  }
+  
+  #navigation > li {
+  height: 100%;
+  margin-right: 0.5em;
+  padding: 0 1em;
+  display: inline;
+  }
+  
+  #navigation > li > a {
+  height: 100%;
+  color: darkblue;
+  text-decoration: none;
+  line-height: 3;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: inline-block;
+  }
+  
+  #navigation > li > a:hover {
+  color: blue;
+  text-decoration: none;
+  }
+  
+  #grades {
+  background:lightskyblue;
+  list-style: none;
+  text-align: center;
+  }
+  
+  #grades > li {
+  
+  margin-right: 0.5em;
+  margin-left: 0.5em;
+  display: inline;
+  }
+  
+  #grades > li > a {
+  
+  color: darkblue;
+  text-decoration: none;
+  line-height: 3;
+  font-weight: bold;
+  text-transform: uppercase;
+  display: block;
+  font-size: x-large;
+  padding:10px 30px 10px 10px;
+  text-align: center;
+  }
+  
+  #grades > li > a:hover {
+  color: blue;
+  text-decoration: none;
+  }
+  
+  body {
+      background-color: lightskyblue;
+  }
+  h1{
+      text-align: center;
+      font-size: xx-large;
+      color: rgb(6, 0, 78);
+  }
+
+    .container {
+      width: 600px; 
+      margin: 25px auto;
+    }
+    
+    .button{
+      background-color: white;
+      width:160px;
+      height:60px;
+      color: blue;
+      display: inline;
+      margin: 30px;
+      padding: 7px 35px;
+      font-size: 15px;
+      border: solid;
+      cursor: pointer;
+    }
+    
+    .button:hover{
+      background-color: lightskyblue;
+      font-size: 18px;
+      transition: 0.5s;
+    }
+       </style>
+    <title>Math Review Page</title>
+    </head>
+    <body>
+    
+      <ul id="navigation">
+
+        <li><a href="Home.html">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contacts</a></li>
+        <li><a href="#">Extra</a></li>
+        <li><a href="Logout.php" style="float:right;">Logout</a></li>
+        </ul>
+
+    <div class="container" style="text-align:center;">
+    <h2>Science Review</h2>
+      <button class="button" onclick="document.location='Life.html'">Life</button>
+      <button class="button" onclick="document.location='Earth.html'">Earth</button>
+      <button class="button" onclick="document.location='Physical.html'">Physical</button>
+      </div>
+      </body>
+      </html>
