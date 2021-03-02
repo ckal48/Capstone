@@ -8,9 +8,57 @@
     <title>Home Page</title>
     </head>
 <style>
+
+#title {
+  margin: 50px 0px 0px 0px;
+  text-align: center;
+  font-size: xx-large;
+}
+
+#title > a {
+  text-decoration: none;
+}
+
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+
+#main{
+width:100%;
+}
+
+#gifRight{
+float: right;
+width:100px;
+}
+
+#gifLeft{
+float: left;
+width:100px;
+}
+
+#center{
+margin:0 auto;
+border-style: double;
+width:30%;
+border-width:thick;
+border-radius: 20px;
+padding: 10px 10px 10px 10px;
+}
+
+#title:hover {
+transition: transform .6s;
+text-decoration: none;
+-ms-transform: scale(1.5); /* IE 9 */
+-webkit-transform: scale(1.5); /* Safari 3-8 */
+transform: scale(1.5); 
+}
+
 #navigation {
-margin: 0px 0px 70px 0px;
-padding: 0 1em;
+margin: 50px 0px 70px 0px;
+padding: 0px 20px 0px 20px;
 background:lightsteelblue;
 height: 3em;
 list-style: none;
@@ -37,6 +85,10 @@ display: inline-block;
 #navigation > li > a:hover {
 color: blue;
 text-decoration: none;
+transition: transform .6s;
+-ms-transform: scale(1.5); /* IE 9 */
+-webkit-transform: scale(1.5); /* Safari 3-8 */
+transform: scale(1.5); 
 }
 
 #grades {
@@ -60,27 +112,39 @@ line-height: 3;
 font-weight: bold;
 text-transform: uppercase;
 display: block;
-font-size: x-large;
-padding:10px 30px 10px 10px;
+font-size: xx-large;
+padding:30px 30px 30px 10px;
 text-align: center;
 }
 
 #grades > li > a:hover {
 color: blue;
+transition: transform .6s;
 text-decoration: none;
+-ms-transform: scale(1.5); /* IE 9 */
+-webkit-transform: scale(1.5); /* Safari 3-8 */
+transform: scale(1.5); 
 }
 
 body {
-    background-color: lightskyblue;
+  background-color: lightskyblue;
 }
 h1{
-    text-align: center;
-    font-size: xx-large;
-    color: rgb(6, 0, 78);
+  text-align: center;
+  font-size: xx-large;
+  color: rgb(6, 0, 78);
 }
 </style>
 <body>
 
+    <div id = "title">
+        <a href="Home.html">
+    A Tool for School
+    </a>
+    <img src="https://www.clipartmax.com/png/full/256-2569699_building-computer-hand-cartoon-tools-tool-tools-clipart.png" alt="Picture of tools" width="50" height="50">
+</div>
+    
+    <div>
     <ul id="navigation">
 
     <li><a href="Home.html">Home</a></li>
@@ -89,16 +153,80 @@ h1{
     <li><a href="#">Extra</a></li>
     <li><a href="Logout.php" style="float:right;">Logout</a></li>
     </ul>
+    </div>
+    
+<h1>Choose Your Grade Level</h1></br></br>
 
-<h1>Choose Your Grade Level</h1>
-<div style="border-style: double;width:20%;margin:auto;border-width:thick;border-radius: 20px;">
-<div>
+<div id="main">
+
+  <div id="gifLeft">
+  
+    <div>
+      <img src="https://media.giphy.com/media/mEh3p94xYDmrrgkdT3/giphy.gif" alt="Books" style = "height: 100px;">
+      </div>
+      
+      <div>
+      <img src="https://media.giphy.com/media/mEh3p94xYDmrrgkdT3/giphy.gif" alt="Books" style = "height: 100px;">
+      </div>
+      
+      <div>
+      <img src="https://media.giphy.com/media/mEh3p94xYDmrrgkdT3/giphy.gif" alt="Books" style = "height: 100px;">
+      </div>
+      
+      <div>
+      <img src="https://media.giphy.com/media/mEh3p94xYDmrrgkdT3/giphy.gif" alt="Books" style = "height: 100px;">
+      </div>
+      
+      <div>
+      <img src="https://media.giphy.com/media/mEh3p94xYDmrrgkdT3/giphy.gif" alt="Books" style = "height: 100px;">
+      </div>
+      
+      <div>
+      <img src="https://media.giphy.com/media/mEh3p94xYDmrrgkdT3/giphy.gif" alt="Books" style = "height: 100px;">
+      </div>
+  
+  </div>
+  
+  <div id="gifRight">
+  
+    <div>
+      <img src="https://media.giphy.com/media/mEh3p94xYDmrrgkdT3/giphy.gif" alt="Books" style = "height: 100px;">
+      </div>
+      
+      <div>
+      <img src="https://media.giphy.com/media/mEh3p94xYDmrrgkdT3/giphy.gif" alt="Books" style = "height: 100px;">
+      </div>
+      
+      <div>
+      <img src="https://media.giphy.com/media/mEh3p94xYDmrrgkdT3/giphy.gif" alt="Books" style = "height: 100px;">
+      </div>
+      
+      <div>
+      <img src="https://media.giphy.com/media/mEh3p94xYDmrrgkdT3/giphy.gif" alt="Books" style = "height: 100px;">
+      </div>
+      
+      <div>
+      <img src="https://media.giphy.com/media/mEh3p94xYDmrrgkdT3/giphy.gif" alt="Books" style = "height: 100px;">
+      </div>
+      
+      <div>
+      <img src="https://media.giphy.com/media/mEh3p94xYDmrrgkdT3/giphy.gif" alt="Books" style = "height: 100px;">
+      </div>
+  
+    </div>
+    
+  <div id="center">
+  
 <ul id="grades">
     <li><a href="#">4th Grade</a></li>
     <li><a href="LearningTools.html">5th Grade</a></li>
     <li><a href="#">6th Grade</a></li>
 </ul>
+
+  </div>
+  
 </div>
-</div>
+
 </body>
 </html> 
+

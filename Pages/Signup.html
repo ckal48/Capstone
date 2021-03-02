@@ -8,14 +8,14 @@
     <title>Signup Page</title>
 
     <style>
-      body {
-    background-color: lightskyblue;
-    }
-    .main{
-    margin: 100px 0px 70px 0px;
-    text-align: center;
-    color: rgb(6, 0, 78);
-  }
+   body {
+  background-color: lightskyblue;
+}
+.main{
+margin: 50px 0px 70px 0px;
+text-align: center;
+color: rgb(6, 0, 78);
+}
       #sign {
 background:lightskyblue;
 text-align: center;
@@ -26,6 +26,24 @@ margin:auto;
 border-width:thick;
 border-radius: 20px;
 padding:30px 30px 30px 30px;
+}
+#title {
+margin: 50px 0px 0px 0px;
+text-align: center;
+font-size: xx-large;
+}
+
+img {
+display: block;
+margin-left: auto;
+margin-right: auto;
+}
+#title:hover {
+transition: transform .6s;
+text-decoration: none;
+-ms-transform: scale(1.5); /* IE 9 */
+-webkit-transform: scale(1.5); /* Safari 3-8 */
+transform: scale(1.5); 
 }
     </style>
     </head>
@@ -119,7 +137,10 @@ padding:30px 30px 30px 30px;
     </script>
 
 <body>
-  <h2>The Early Learning Game</h2>
+  <div id = "title">
+    A Tool for School
+    <img src="https://www.clipartmax.com/png/full/256-2569699_building-computer-hand-cartoon-tools-tool-tools-clipart.png" alt="Picture of tools" width="50" height="50">
+</div>
 <div class="main">  
             <!-- This Form is for signing up for the website -->
             <h1 style="text-align:center;">Create Account</h1>
