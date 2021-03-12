@@ -18,23 +18,19 @@ margin-right: auto;
 width:100%;
 }
 
-#gifRight{
+#Right{
 float: right;
 width:100px;
 }
 
-#gifLeft{
+#Left{
 float: left;
 width:100px;
 }
 
 #center{
 margin:0 auto;
-border-style: double;
-width:30%;
-border-width:thick;
-border-radius: 20px;
-padding: 10px 10px 10px 10px;
+padding: 0;
 }
 
 #title:hover {
@@ -128,10 +124,6 @@ h2{
   color: blue;
   }
   
-  p{
-  font-size: 15px;
-  border: solid 3px green;
-  }
     .container {
       width: 600px; 
       margin: 25px auto;
@@ -155,3 +147,12 @@ h2{
       font-size: 18px;
       transition: 0.5s;
     }
+
+    #gameContainer canvas {
+      border: #707070 solid 1px;
+      border-radius: 5px;
+      display: block;
+      width: 800px;
+      height: 600px;
+      margin: 15px auto;
+  }
