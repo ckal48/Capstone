@@ -23,7 +23,7 @@ var Game = Game || (function (createjs) {
 
             //++++++++++++++++++ SCORM CODE ++++++++++++++++++++++++
 
-       /*      var isLmsConnected = false;
+            var isLmsConnected = false;
             var currentLmsInteraction = null;
 
             if (typeof ScormHelper !== 'undefined') {
@@ -43,7 +43,7 @@ var Game = Game || (function (createjs) {
                 quit = function () {
                     window.location = "http://www.wisc-online.com";
                 }
-            } */
+            } 
             //++++++++++++++++++   END SCORM   ++++++++++++++++++++++
 
 
@@ -84,9 +84,9 @@ var Game = Game || (function (createjs) {
                 { id: "startButton", src: assetsPath + "startButton.png"},
                 { id: "clockBack", src: assetsPath + "clockBack.png" },
                 { id: "clockHand", src: assetsPath + "clockHand.png" },
-                { id: "border", src: assetsPath + "WaterBorder.png" },
+                //{ id: "border", src: assetsPath + "WaterBorder.png" },
                 { id: "background", src: assetsPath + "JungleBackground.jpg" },
-                { id: "snakeHead", src: assetsPath + "snakeHead.jpg" },
+                { id: "snakeHead", src: assetsPath + "SnakeHead.png" },
                 { id: "snakeBody", src: assetsPath + "snakeBody.png" },
                 { id: "snakeTail", src: assetsPath + "snakeTail.png" },
                 { id: "snakeCandyImage", src: assetsPath + "snakeCandy.png" },
@@ -97,7 +97,7 @@ var Game = Game || (function (createjs) {
                 { id: "Snack", src: assetsPath + "donut.png" },
                 { id: "Snack2", src: assetsPath + "IceCreamBar.png" },
                 { id: "HalfEatenIceCreamBar", src: assetsPath + "HalfEatenIceCreamBar.png" },
-                { id: "Ghost", src: assetsPath + "Eagle.jpg" },
+                { id: "Ghost", src: assetsPath + "Ghost.png" },
                 { id: "smoke", src: assetsPath + "smoke.png" },
                 { id: "star", src: assetsPath + "star.png" },
                 { id: "panel", src: assetsPath + "Panel.png" },
@@ -140,10 +140,10 @@ var Game = Game || (function (createjs) {
                 gameBackground.y = 0;
                 var dirBackgroundImage = new createjs.Bitmap(queue.getResult("background"));
                 gameBackground.addChild(dirBackgroundImage);
-                var dirBorderImage = new createjs.Bitmap(queue.getResult("border"));
+                //var dirBorderImage = new createjs.Bitmap(queue.getResult("border"));
                 //dirBackgroundImage.x = 200;
                 //dirBackgroundImage.y = 200;
-                gameBackground.addChild(dirBorderImage);
+               // gameBackground.addChild(dirBorderImage);
 
                 self.stage.addChild(gameBackground);
                 introductionScreen();
@@ -233,7 +233,7 @@ var Game = Game || (function (createjs) {
                 // Main Intro Screen
                 var directionsScreen = new createjs.Container();
 
-                var label = new createjs.Text("Directions  \nDirect the snake to the correct answer by using your arrow keys. Try to avoid the eagle if you can so you don't lose points. Avoid the water around the edge of the game board. Press the play button to begin.", "bold 20px Arial", "#000000");
+                var label = new createjs.Text("Directions  \nDirect the snake to the correct answer by using your arrow keys. Try to avoid the ghost if you can so you don't lose points. Avoid the water around the edge of the game board. Press the play button to begin.", "bold 20px Arial", "#000000");
                 // label.textAlign = "center";
                 label.lineHeight = "30";
                 label.lineWidth = 500;
@@ -653,14 +653,14 @@ var Game = Game || (function (createjs) {
                 function setSpeedForSnake(speedScale) {
                    clearInterval(speedInterval);
 
-                    var speed = 40;
+                    var speed = 50;
 
-                    if (Score < 10) {
+                    if (Score < 6) {
                         speed = speed * speedScale;
-                    } else if (Score < 40) {
+                    } else if (Score < 11) {
+                        speed = 40 * speedScale;
+                    } else if (Score < 16) {
                         speed = 30 * speedScale;
-                    } else if (Score < 60) {
-                        speed = 20 * speedScale;
                     } else {
                         speed = speed * speedScale;
                     }
@@ -828,10 +828,6 @@ var Game = Game || (function (createjs) {
                                 answersContainer2.removeAllChildren();
                                 isEating = true;
                                 showFeedbackCorrect();
-                                correctMultiplier = correctMultiplier + 1;
-                                if (correctMultiplier == 4) {
-                                    correctMultiplier = 3;
-                                }
                             } else {
                                 var question = questionsArray[onThisQuestionNumber]
                                 answersContainer2.removeAllChildren();
@@ -873,7 +869,7 @@ var Game = Game || (function (createjs) {
                                 createjs.Tween.get(star).wait(90).to({ alpha: 0, visible: false });
                                 self.stage.removeChild(randomCandyContainer);
                                 isEatingCandy = true;
-                                Score = Score + 10;
+                                Score = Score + 1;
                                 scoreTick = 0;
                                 printScore();
                                 KillAnimation = true;
@@ -891,7 +887,7 @@ var Game = Game || (function (createjs) {
                                 createjs.Tween.get(halfEaten).wait(90).to({ alpha: 0, visible: false });
                                 self.stage.removeChild(randomCandyContainer);
                                 isEatingCandy = true;
-                                Score = Score + 10;
+                                Score = Score + 1;
                                 scoreTick = 0;
                                 printScore();
                                 KillAnimation = true;
@@ -957,8 +953,8 @@ var Game = Game || (function (createjs) {
 
 
                     Score = Score + 1;
-                    Score = Score - scoreTick;
-                    scoreTick = 0;
+                    //Score = Score - scoreTick;
+                    //scoreTick = 0;
 
                     printScore();
                     var labeltitle = new createjs.Text("Good Job!", "bold 18px Arial", "#FFFFFF");
@@ -1265,11 +1261,11 @@ var Game = Game || (function (createjs) {
                 tick = tick + 1;
                 if (tick == 60) {
                     tick = 0;
-                    scoreTick = scoreTick + 1;
+                    scoreTick = scoreTick + 0;
                 }
 
-                if (scoreTick == 15) {
-                    scoreTick = 14;
+                if (scoreTick == 0) {
+                    scoreTick = 0;
                 }
             }
 

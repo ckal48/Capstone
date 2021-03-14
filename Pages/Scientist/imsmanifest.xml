@@ -42,6 +42,7 @@
       <file href="src/Assets/clockBack.png" />
       <file href="src/Assets/clockHand.png" />
       <file href="src/Assets/donut.png" />
+      <file href="src/Assets/Eagle.jpg" />
       <file href="src/Assets/GameOver.mp3" />
       <file href="src/Assets/Ghost.png" />
       <file href="src/Assets/greenback.png" />
@@ -57,11 +58,13 @@
       <file href="src/Assets/smoke.png" />
       <file href="src/Assets/snakeBody.png" />
       <file href="src/Assets/snakeCandy.png" />
+      <file href="src/Assets/snakeHead.jpg" />
       <file href="src/Assets/SnakeHead.png" />
       <file href="src/Assets/snakeTail.png" />
       <file href="src/Assets/star.png" />
       <file href="src/Assets/startButton.png" />
       <file href="src/Assets/triangle border.png" />
+      <file href="src/Assets/Waterborder.png" />
     </resource>
   </resources>
 </manifest>
