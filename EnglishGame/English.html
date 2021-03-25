@@ -1,0 +1,132 @@
+﻿<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<title>English Review</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<script type="text/javascript" src="lib/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="lib/SCORM_API_wrapper.js"></script>
+		<script type="text/javascript" src="lib/ScormHelper.js"></script>
+		<script type="text/javascript" src="src/createjs.min.js"></script>
+		<script type="text/javascript" src="src/gameData.js"></script>
+		<script type="text/javascript" src="src/game.js"></script>
+		<script type="text/javascript">
+			function onUnload() {
+	
+				ScormHelper.cmi.exit("");
+	
+				ScormHelper.terminate();
+			}
+		</script>
+
+	
+		<link href='http://fonts.googleapis.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'>
+		<!--[if lte IE 8]><script src="js/html5shiv.js"></script><![endif]-->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-panels.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel-noscript.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-desktop.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
+	</head>
+	<body class="homepage">
+
+		<!-- Header -->
+		<div id="header">
+			<div class="container"> 
+				
+				<!-- Logo -->
+				<div id="logo">
+					<h1><a href="Home.html">
+						A Tool for School
+						</a></h1>
+					<span><img src="https://www.clipartmax.com/png/full/256-2569699_building-computer-hand-cartoon-tools-tool-tools-clipart.png" alt="Picture of tools" width="70" height="70">
+					</div></span>
+				</div>
+				
+				<!-- Nav -->
+				<nav id="nav">
+					<ul>
+						<li class="active"><a href="Home.html">Home</a></li>
+						<li><a href="#">About</a></li>
+                        <li><a href="#">Contacts</a></li>
+                        <li><a href="#">Extra</a></li>
+                        <li><a href="Logout.php">Logout</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+
+		<!-- Main -->
+		<div id="main">
+			<div class="container">
+				<div class="row"> 
+					
+					<!-- Content -->
+					<div id="content" class="12u skel-cell-important">
+						<section>
+							<header>
+								<h2 style = "text-align: center;">Shoot Your Shot</h2>
+							</header>
+							<div id="gameContainer">
+								<canvas width="800" height="600">
+									<h3>Your browser does not support HTML5.</h3>
+								</canvas>
+								<script type="text/javascript">
+									(function () {
+										var canvas = (function () {
+											var scripts = document.getElementsByTagName('script');
+											var targetDiv = scripts[scripts.length - 1].previousElementSibling || scripts[scripts.length - 1].previousSibling;
+											return targetDiv;
+										})();
+							
+										gameData.assetsPath = "src/";
+							
+										if (gameData.Title) {
+											document.title = gameData.Title;
+										}
+							
+										var game = new Game(canvas, gameData);
+							
+										$(function () {
+											$("#gameTitleSpan").text(gameData.Title);
+										});
+									})();
+								</script>
+							</div>
+						</section>
+					</div>
+					
+				</div>
+			</div>
+
+            <div id="licenseContainer">
+                <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
+                    <img alt="Creative Commons License" style="border-width: 0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" />
+                </a>
+                <div>
+                    <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title" id="gameTitleSpan">This game</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Fox Valley Technical College</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+                            <p>
+                                This workforce product was funded by a grant awarded by the U.S. Department of Labor’s Employment and Training Administration. The product was created by the grantee and does not necessarily reflect the official position of the U.S. Department of Labor. The U.S. Department of Labor makes no guarantees, warranties, or assurances of any kind, express or implied, with respect to such information, including any information on linked sites and including, but not limited to, accuracy of the information or its completeness, timeliness, usefulness, adequacy, continued availability, or ownership. This is an equal opportunity program. Assistive technologies are available upon request and include Voice/TTY (771 or 800-947-6644).
+                            </p>
+                </div>
+              </div>	
+              
+		</div>
+										
+
+		<!-- Copyright -->
+		<div id="copyright">
+			<div class="container">
+				Design: <a href="http://templated.co">TEMPLATED</a> Images: <a href="http://unsplash.com">Unsplash</a> (<a href="http://unsplash.com/cc0">CC0</a>)
+			</div>
+		</div>
+		
+	</body>
+</html>
