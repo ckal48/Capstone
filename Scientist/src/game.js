@@ -1133,7 +1133,7 @@ var Game = Game || (function (createjs) {
             //End Interaction Function
 
             function gameOverScreen() {
-
+            
             }
 
             function DisplayEndingNotes(EndedHow) {
@@ -1164,8 +1164,8 @@ var Game = Game || (function (createjs) {
                     var endText = new createjs.Text("Press the replay button to play again.", "bold 16px Arial", "#FFFFFF");
 
                 } else {
-                    var endText = new createjs.Text("You have answered all the questions in this game. \n\nPress the replay button to play again.", "bold 16px Arial", "#FFFFFF");
-
+                    //var endText = new createjs.Text("You have answered all the questions in this game.", "bold 16px Arial", "#FFFFFF");
+                    location.href = "../Scientist/results.html";
                 }
 
 
@@ -1321,7 +1321,6 @@ var Game = Game || (function (createjs) {
                 if (url) {
 
                     var data = {
-                        gameId: gameData.id,
                         score: score
                     };
 

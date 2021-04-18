@@ -1,7 +1,15 @@
-﻿<!DOCTYPE HTML>
+﻿<?php
+   session_start();
+   if($_SESSION['login_user']){
+      echo "Welcome " . $_SESSION["login_user"];
+   }else{
+      header("location:../Login.html");
+   }
+?>
+<!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
-		<title>Social Studies Review</title>
+		<title>English Review</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -43,7 +51,7 @@
 				
 				<!-- Logo -->
 				<div id="logo">
-					<h1><a href="Home.html">
+					<h1><a href="../Home.php">
 						A Tool for School
 						</a></h1>
 					<span><img src="https://www.clipartmax.com/png/full/256-2569699_building-computer-hand-cartoon-tools-tool-tools-clipart.png" alt="Picture of tools" width="70" height="70">
@@ -53,11 +61,11 @@
 				<!-- Nav -->
 				<nav id="nav">
 					<ul>
-						<li class="active"><a href="Home.html">Home</a></li>
-						<li><a href="#">About</a></li>
-                        <li><a href="#">Contacts</a></li>
-                        <li><a href="#">Extra</a></li>
-                        <li><a href="Logout.php">Logout</a></li>
+						<li class="active"><a href="../EnglishGame/English.php">English</a></li>
+						<li><a href="../math-game/math.php">Math</a></li>
+                        <li><a href="../Scientist/Science.php">Science</a></li>
+                        <li><a href="../Social-Studies-Bee/SocialStudies.php">Social Studies</a></li>
+                        <li><a href="../Logout.php">Logout</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -72,7 +80,7 @@
 					<div id="content" class="12u skel-cell-important">
 						<section>
 							<header>
-								<h2 style = "text-align: center;">Social Studies Bee</h2>
+								<h2 style = "text-align: center;">Shoot Your Shot</h2>
 							</header>
 							<div id="gameContainer">
 								<canvas width="800" height="600">

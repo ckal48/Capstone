@@ -1,4 +1,12 @@
-    <!DOCTYPE HTML>
+<?php
+   session_start();
+   if($_SESSION['login_user']){
+      echo "Welcome user " . $_SESSION["login_user"];
+   }else{
+      header("location:Login.html");
+   }
+?>
+	<!DOCTYPE HTML>
 <!--
 	Iridium by TEMPLATED
     templated.co @templatedco
@@ -32,7 +40,7 @@
 				
 				<!-- Logo -->
 				<div id="logo">
-					<h1><a href="Home.html">
+					<h1><a href="Home.php">
 						A Tool for School
 						</a></h1>
 					<span><img src="https://www.clipartmax.com/png/full/256-2569699_building-computer-hand-cartoon-tools-tool-tools-clipart.png" alt="Picture of tools" width="70" height="70">
@@ -42,7 +50,7 @@
 				<!-- Nav -->
 				<nav id="nav">
 					<ul>
-						<li class="active"><a href="Home.html">Home</a></li>
+						<li class="active"><a href="Home.php">Home</a></li>
 						<li><a href="#">About</a></li>
                         <li><a href="#">Contacts</a></li>
                         <li><a href="#">Extra</a></li>
@@ -66,7 +74,7 @@
 							<div>
 								<ul id="grades">
 									<li><a href="#">4th Grade</a></li>
-									<li><a href="LearningTools.html">5th Grade</a></li>
+									<li><a href="LearningTools.php">5th Grade</a></li>
 									<li><a href="#">6th Grade</a></li>
 								</ul>
 							 </div>

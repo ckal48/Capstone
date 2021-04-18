@@ -681,14 +681,15 @@ var Game = Game || (function (createjs, $) {
                     var url = gameData.leaderboardUrl;
                     if (url) {
                         var data = {
-                            gameId: gameData.id,
                             score: score
                         };
 
                         $.ajax(url, {
                             type: "POST",
                             data: data,
-                            success: function (x) { },
+                            success: function (x) { 
+                                location.href = "../Social-Studies-Bee/results.html";
+                            },
                             error: function (x, y, z) { }
                         });
                     }

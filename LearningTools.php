@@ -1,3 +1,11 @@
+<?php
+   session_start();
+   if($_SESSION['login_user']){
+      echo "Welcome user " . $_SESSION["login_user"];
+   }else{
+      header("location:Login.html");
+   }
+?>
 <!DOCTYPE HTML>
 <!--
 	Iridium by TEMPLATED
@@ -32,7 +40,7 @@
 				
 				<!-- Logo -->
 				<div id="logo">
-					<h1><a href="Home.html">
+					<h1><a href="Home.php">
 						A Tool for School
 						</a></h1>
 					<span><img src="https://www.clipartmax.com/png/full/256-2569699_building-computer-hand-cartoon-tools-tool-tools-clipart.png" alt="Picture of tools" width="70" height="70">
@@ -42,7 +50,7 @@
 				<!-- Nav -->
 				<nav id="nav">
 					<ul>
-						<li class="active"><a href="Home.html">Home</a></li>
+						<li class="active"><a href="Home.php">Home</a></li>
 						<li><a href="#">About</a></li>
                         <li><a href="#">Contacts</a></li>
                         <li><a href="#">Extra</a></li>
@@ -64,10 +72,10 @@
 								<h2>5th Grade Learning Tools</h2>
 							</header>
 								<div class="container" style="text-align:center;">
-                                      <button class="button" onclick="document.location='EnglishGame/English.html'">English</button>
-                                      <button class="button" onclick="document.location='math-game/math.html'">Math</button>
-                                      <button class="button" onclick="document.location='Scientist/Science.html'">Science</button>
-                                      <button class="button" onclick="document.location='Social-Studies-Bee/SocialStudies.html'">Social Studies</button>
+                                      <button class="button" onclick="document.location='EnglishGame/English.php'">English</button>
+                                      <button class="button" onclick="document.location='math-game/math.php'">Math</button>
+                                      <button class="button" onclick="document.location='Scientist/Science.php'">Science</button>
+                                      <button class="button" onclick="document.location='Social-Studies-Bee/SocialStudies.php'">Social Studies</button>
                                       </div>
                         </section>
 					</div>

@@ -866,7 +866,7 @@ var Game = Game || (function (createjs, $) {
                 gameState.timerOn = false;
                 var soundStuff = stage.getChildByName("theSoundContainer");
                 soundStuff.visible = true;
-                var pointsEarned = (currentstate.shotsLeft * 50);
+                var pointsEarned = (currentstate.shotsLeft * 1);
                 var container = new createjs.Container();
                 container.y = 100;
 
@@ -923,7 +923,7 @@ var Game = Game || (function (createjs, $) {
                 gameState.timerOn = false;
                 var soundStuff = stage.getChildByName("theSoundContainer");
                 soundStuff.visible = true;
-                var pointsEarned = (currentstate.shotsLeft * 50);
+                var pointsEarned = (currentstate.shotsLeft * 1);
                 var container = new createjs.Container();
                 container.y = 100;
 
@@ -1055,7 +1055,7 @@ var Game = Game || (function (createjs, $) {
                     startOverButton.regY = 35;
                     startOverButton.addChild(startOverButtonBackground);
 
-                    var startOverText = new createjs.Text("Start\nOver", "20pt Arial", "white");
+                    var startOverText = new createjs.Text("Results", "20pt Arial", "white");
                     startOverText.textAlign = "center";
                     startOverText.textBaseline = "middle";
                     startOverText.x = 90;
@@ -1068,13 +1068,7 @@ var Game = Game || (function (createjs, $) {
          ////////////////////
                     startOverButton.addEventListener("click", function (evt) {
 
-                        nextStep = "startOver";
-                        questionIndex = 0;
-                        gameState.score = 0;
-                        createjs.Sound.play("buttonClick");
-                        view.removeAllChildren();
-                        showView(createTitleView());
-
+                        location.href = "../EnglishGame/results.html";
                     });
 
                 }
@@ -1196,13 +1190,10 @@ var Game = Game || (function (createjs, $) {
             }
 
             function submitScore(score) {
-
                 var url = gameData.leaderboardUrl;
-
                 if (url) {
 
                     var data = {
-                        gameId: gameData.id,
                         score: score
                     };
 
@@ -1210,7 +1201,7 @@ var Game = Game || (function (createjs, $) {
                         type: "POST",
                         data: data,
                         success: function (x) {
-
+                        
                         },
                         error: function (x, y, z) {
 

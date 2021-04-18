@@ -1,6 +1,7 @@
 /***** ELEMENTS *****/
 var startButton = document.getElementById("start");
 var stopButton = document.getElementById("stop");
+var resultButton = document.getElementById("result");
 var inputField = document.getElementById("in");
 var form = document.querySelector("form");
 var p = document.getElementById("p");
@@ -28,6 +29,7 @@ var times = [];
 /***** INITIALIZING *****/
 inputField.className = "hide";
 stopButton.className = "hide";
+resultButton.className = "hide";
 
 /***** EVENTS *****/
 startButton.onclick = function() {
@@ -72,6 +74,7 @@ stopButton.onclick = function() {
 	inputField.className = "hide"; // hide the input field
 	stopButton.className = "hide"; // hide the stop button
 	startButton.className = ""; // show the start button
+	resultButton.className = "";
 
 	// clear numbers and present results
 	p.innerHTML = "";
@@ -159,6 +162,29 @@ var getAnswer = function() {
 	// clear the input field for the next round
 	inputField.value = "";
 	refreshNums();
+};
+
+resultButton.onclick = function() {
+	var url = "../math-game/results.php";
+                if (url) {
+
+					var data = {
+						score: score
+					};
+
+                    $.ajax(url, {
+                        type: "POST",
+                        data: data,
+                        success: function (x) {
+							location.href = "../math-game/results.html";
+                        },
+                        error: function (x, y, z) {
+
+                        }
+                    });
+
+                }
+				//location.href = "../math-game/results.html";
 };
 
 var getCategory = function(mean) {

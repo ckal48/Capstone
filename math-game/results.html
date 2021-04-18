@@ -18,14 +18,14 @@
 		</noscript>
         <!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
         <!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]-->
-    <title>Signup Page</title>
+    <title>User Information Page</title>
 
     <style>
 .main{
 text-align: center;
 color: rgb(6, 0, 78);
 }
-      #sign {
+      #results {
 background:lightskyblue;
 text-align: center;
 font-size: large;
@@ -47,7 +47,7 @@ padding:30px 30px 30px 30px;
           
           <!-- Logo -->
           <div id="logo">
-            <h1><a href="Home.html">
+            <h1><a href="../Home.php">
               A Tool for School
               </a></h1>
             <span><img src="https://www.clipartmax.com/png/full/256-2569699_building-computer-hand-cartoon-tools-tool-tools-clipart.png" alt="Picture of tools" width="70" height="70">
@@ -64,28 +64,18 @@ padding:30px 30px 30px 30px;
       <div id="content" class="12u skel-cell-important">
         <section>
           <header>
-            <h2 style = "text-align: center;">Signup</h2>
+            <h2 style = "text-align: center;">User Information</h2>
           </header>
           <div class="main">  
-            <!-- This Form is for signing up for the website -->
-            <h2 style="text-align:center;">Create Account</h2>
-    <div id="sign">
-        <form id="sign-form" class="form" method= "post" action="Signup.php">
-        <input type="hidden" name="Signup" value="1"/>
-         <label for="firstname">First Name:</label>
-         <input type="text" id="firstname" name="firstname"/><br><br>
-         <label for="lastname">Last Name:</label>
-         <input type="text" id="lastname" name="lastname"/><br><br>
-         <label for="username">Username:</label>
-         <input type="text" id="Username" name="Username"/><br><br>
-         <label for="email">Email Address:</label>
-         <input type="email" id="address" name="address"/><br><br>
-         <label for="password">Password:</label>
-         <input type="password" id="password1" name="password1"/><br><br>
-         <label for="verify">Verify Password:</label>
-         <input type="password" id="password2" name="password2"/><br><br>
-        <input type="submit"/>
-        <input type="reset"/>
+    <div id="results">
+        <form id="results-form" class="form" method="POST" action="results.php">
+         <label for="Age">Age:</label>
+         <input type="text" id="Age" name="Age"/><br><br>
+         <label for="State">State:</label>
+         <input type="text" id="State" name="State"/><br><br>
+         <label for="Grade">Grade:</label>
+         <input type="text" id="Grade" name="Grade"/><br><br>
+         <input id="submit" name="submit" type="submit" value="Submit"><br><br>
         </form>
         </div>
     </div>

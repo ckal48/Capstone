@@ -1,35 +1,27 @@
 <?php
    session_start();
    include_once 'Connection.php';
-if(isset($_POST) and $_POST['submit'] == "Submit" )
-{
-$Username = mysql_escape_string($_POST['Username']);
-$Password = mysql_escape_string($_POST['Password']);
-$error = array();
-// Email Validation
-if(empty($Username))
-{
-$error[] = "Empty or invalid email address";
-}
-if(empty($Password)){
-$error[] = "Enter your password";
-}
-if(count($error) == 0){
-$con = new Mongo();
-if($con){
-// Select Database
-$db = $con->mydatabase;
-// Select Collection
-$mycollection = $db->mycollection;
-$qry = array("user" => $Username,"password" => $Password);
-$result = $mycollection->findOne($qry);
-if($result){
-$_SESSION['login_user'] = $Username;
-header("location: Homepage.php");
-}
-} else {
-die("Mongo DB not installed");
-}
-}
-}
+   
+   if($_SERVER["REQUEST_METHOD"] == "POST") {
+      // username and password sent from form 
+      
+      $Username = mysqli_real_escape_string($conn,$_POST['Username']);
+      $Password = mysqli_real_escape_string($conn,$_POST['Password']); 
+      
+      $sql = "SELECT Username, Password FROM users WHERE Username = '$Username' and Password = '$Password'";
+      $result = mysqli_query($conn,$sql);
+      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+      $active = $row['active'];
+      
+      $count = mysqli_num_rows($result);
+      
+      // If result matched $myusername and $mypassword, table row must be 1 row
+		
+      if($count == 1) {
+         $_SESSION['login_user'] = $Username;
+         header("location: Home.php");
+      }else {
+         $error = "Your Login Name or Password is invalid";
+      }
+   }
 ?>

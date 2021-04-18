@@ -1,4 +1,12 @@
-<!doctype HTML>
+<?php
+session_start();
+if($_SESSION['login_user']){
+   echo "Welcome user " . $_SESSION["login_user"];
+}else{
+   header("location:../Login.html");
+}
+?> 
+<!Doctype HTML>
 <html lang="en">
 	<head>
 		<title>Math Review Game</title>
@@ -26,9 +34,9 @@ body {
 	color: #333;
 }
 
-h1 {
+/*h1 {
 	font-size: 4em;
-}
+}*/
 
 h2 {
 	font-size: 2em;
@@ -98,6 +106,10 @@ p span {
 	border-color: #FF6666;
 	margin-top: 40px;
 }
+#result {
+	background-color: #FF6666;
+	border-color: #FF6666;
+}
 		
 	</style>
 	</head>
@@ -110,7 +122,7 @@ p span {
 				
 				<!-- Logo -->
 				<div id="logo">
-					<h1><a href="Home.html">
+					<h1><a href="../Home.php">
 						A Tool for School
 						</a></h1>
 					<span><img src="https://www.clipartmax.com/png/full/256-2569699_building-computer-hand-cartoon-tools-tool-tools-clipart.png" alt="Picture of tools" width="70" height="70">
@@ -120,11 +132,11 @@ p span {
 				<!-- Nav -->
 				<nav id="nav">
 					<ul>
-						<li class="active"><a href="Home.html">Home</a></li>
-						<li><a href="#">About</a></li>
-                        <li><a href="#">Contacts</a></li>
-                        <li><a href="#">Extra</a></li>
-                        <li><a href="Logout.php">Logout</a></li>
+						<li class="active"><a href="../math-game/math.php">Math</a></li>
+						<li><a href="../EnglishGame/English.php ">English</a></li>
+                        <li><a href="../Scientist/Science.php">Science</a></li>
+                        <li><a href="../Social-Studies-Bee/SocialStudies.php">Social Studies</a></li>
+                        <li><a href="../Logout.php">Logout</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -143,7 +155,7 @@ p span {
 							</header>
 							<div class="Mathcontainer">
 								<h2>How fast are you?</h2>
-								<h2>This game will time how long it takes to answer a question as well as score the number of correct answers!</h2>
+								<h2>This game will time how long it takes to answer a question as well as score the number of correct answers!</h2></br></br>
 								<p>
 									<span id="p"></span> <span id="op"></span> <span id="q"></span>
 								</p>
@@ -156,6 +168,7 @@ p span {
 									</form>
 									<button id="start">START</button>
 									<button id="stop">STOP</button>
+									<button id="result">Result</button>
 								</div>
 							</div>
 							<script type="text/javascript" src="script/math.js"></script>
