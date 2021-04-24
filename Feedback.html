@@ -9,6 +9,7 @@
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
+		<!-- style for textfield -->
 		<title>English Average Page</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
@@ -43,7 +44,7 @@
 				<nav id="nav">
 					<ul>
                             <li class="active"><a href="Feedback.html">Feedback</a></li>
-                            <li><a href="#">About</a></li>
+                            <li><a href="">About</a></li>
                             <li><a href="#">Contacts</a></li>
                             <li><a href="#">Extra</a></li>
                             <li><a href="Logout.php">Logout</a></li>
@@ -51,9 +52,8 @@
 				</nav>
 			</div>
 		</div>
-
 		<!-- Main -->
-		<div id="main">
+		<div style="background:url(images/pics08.jpg);" id="main">
 			<div class="container">
 				<div class="row"> 
 					
@@ -61,19 +61,75 @@
 					<div id="content" class="12u skel-cell-important">
 						<section>
 							<header>
-								<h2 style = "text-align: center;">Please Enter Feedback Below</h2>
+								<br>
+								<h2 style="text-align:center;">Please Enter Any Sugguestions Below</h2>
 							</header>
-							<p>
-                            Feedback Form Here
-                            </p>
-
+							<div style="text-align:center;display:block;" class="container">    
+								<form style="color:skyblue;display: inline-block;margin-left: auto;margin-right: auto;text-align: left;">    
+								  <div class="row">    
+									<div class="col-25">    
+									  <label for="fname">First Name</label>    
+									</div>    
+									<div class="col-75">    
+									  <input type="text" id="fname" name="firstname" placeholder="Your name.."  style="border: 1px solid #555555;box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);">    
+									</div>    
+								  </div>    
+								  <div class="row">    
+									<div class="col-25">    
+									  <label for="user">Identification</label>    
+									</div>    
+									<div class="col-75">    
+									  <select id="user" name="user"  style="border: 1px solid #555555;box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);">    
+										<option value="none">Select User</option>    
+										<option value="parent">Parent</option>    
+										<option value="teacher">Teacher</option>    
+										<option value="student">Student</option>    
+										<option value="someone">Someone else</option>    
+									  </select>    
+									</div>    
+								  </div>    
+								  <div class="row">    
+									<div class="col-25">    
+									  <label for="suggestion">Suggestion</label>    
+									</div>    
+									<div class="col-75">    
+									  <select id="suggestion" name="suggestion"  style="border: 1px solid #555555;box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);">    
+										<option value="none">Select Suggestion</option>    
+										<option value="math">Math</option>    
+										<option value="science">Science</option>    
+										<option value="socialstudies">Social Studies</option>    
+										<option value="english">English</option>    
+										<option value="design">Design</option>    
+										<option value="other">Other</option>     
+									  </select>    
+									</div>    
+								  </div>    
+								  <div class="row">    
+									<div class="col-25">    
+									  <label for="feed_back">Feedback</label>    
+									</div>    
+									<div class="col-75">    
+									  <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px; border: 1px solid #555555;box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);"></textarea>    
+									</div>    
+								  </div>    
+									<br><input type="submit" value="Submit" style="box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19); border: 1px solid #555555;"><br>     
+								</form>    
+							  </div> 		
 						</section>
 					</div>
 					
 				</div>
 			</div>
 		</div>
-										
-		
+
+<!-- Copyright -->
+<div id="copyright">
+	<div class="container">
+		Design: <a href="http://templated.co">TEMPLATED</a> Images: <a href="http://unsplash.com">Unsplash</a> (<a href="http://unsplash.com/cc0">CC0</a>)
+	</div>
+</div>
+
+</body>
+</html>	
 	</body>
 </html>
