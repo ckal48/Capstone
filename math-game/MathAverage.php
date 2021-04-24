@@ -1,4 +1,5 @@
 <?php
+   include_once 'Connection.php';
    session_start();
    if($_SESSION['login_user']){
       echo "Welcome " . $_SESSION["login_user"];
@@ -63,9 +64,41 @@
 							<header>
 								<h2 style = "text-align: center;">Visual Results</h2>
 							</header>
-							<p>
-                            PowerBI data goes here
-                            </p>
+							<h2>
+							<?php
+							$sql = "SELECT  AVG(score) FROM mathresults WHERE Username2 != '{$_SESSION['login_user']}'";
+							$sql2 = "SELECT score FROM mathresults WHERE Username2 = '{$_SESSION['login_user']}'";
+                            $result = $conn->query($sql);
+							$result2 = $conn->query($sql2);
+                            //display data on web page
+                             while($row = mysqli_fetch_array($result2)){
+                             echo "Your score is ". $row['score'] ." ";
+							 }
+							 while($row = mysqli_fetch_array($result)){
+								echo "compared to a user average of ". $row['AVG(score)'];
+								}
+                               //close the connection
+                             $conn->close();
+                             ?>
+                            </h2></br></br>
+
+                        <p>
+							Visual Data Goes Here
+						</p></br></br>
+
+                        <form method="post">
+                        <label for="input">Email Recipient:</label>
+                        <input type="text" id="input" name="input"/><br><br>
+                       <input type="submit" name="submit">
+                        </form> 
+						<?php
+							if(isset($_POST['submit'])) {
+							$to = $_POST['input']; 
+							$subject = "User Results";
+							$message = "Test";
+							mail($to,$subject,$message);
+							}    
+						?>
 
 						</section>
 					</div>
@@ -73,7 +106,7 @@
 				</div>
 			</div>
 		</div>
-										
+					
 		
 	</body>
 </html>

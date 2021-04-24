@@ -1,4 +1,5 @@
 <?php
+include_once 'Connection.php';
    session_start();
    if($_SESSION['login_user']){
       echo "Welcome " . $_SESSION["login_user"];
@@ -63,9 +64,27 @@
 							<header>
 								<h2 style = "text-align: center;">Visual Results</h2>
 							</header>
-							<p>
-                            PowerBI data goes here
-                            </p>
+							<h2>
+							<?php
+							$sql = "SELECT  AVG(score) FROM results WHERE Username2 != '{$_SESSION['login_user']}'";
+							$sql2 = "SELECT score FROM results WHERE Username2 = '{$_SESSION['login_user']}'";
+                            $result = $conn->query($sql);
+							$result2 = $conn->query($sql2);
+                            //display data on web page
+                             while($row = mysqli_fetch_array($result2)){
+                             echo "Your score is ". $row['score'] ." ";
+							 }
+							 while($row = mysqli_fetch_array($result)){
+								echo "compared to a user average of ". $row['AVG(score)'];
+								}
+                               //close the connection
+                             $conn->close();
+                             ?>
+                            </h2></br></br>
+
+                        <p>
+							Visual Data Goes Here
+						</p>
 
 						</section>
 					</div>

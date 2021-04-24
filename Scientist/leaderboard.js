@@ -19,22 +19,6 @@ tabs.forEach(function(tab){
 		items.forEach(function(item){
 			item.style.display = "none";
 		})
-
-		/* if (currenttab == "username") {
-			username.style.display = "block";
-		}  else if (currenttab == "grade") {
-			grade.style.display = "block";
-		} else if (currenttab == "age") {
-			age.style.display = "block";
-		} else if (currenttab == "state") {
-			state.style.display = "block";
-		}  else {
-			username.style.display = "block";
-		} */
-		if (currenttab == "username") {
-			username.style.display = "block";
-		} else {
-			username.style.display = "block";
-		}
+		
 	})
 })

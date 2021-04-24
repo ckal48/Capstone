@@ -82,7 +82,7 @@ padding:30px 30px 30px 30px;
 		<div class="lboard_tabs">
 			<div class="tabs">
 				<ul>
-					<li class="active" data-li="username">Username</li>
+					<li data-li="username">Username</li>
 					<li data-li="score">Score</li>
           <li data-li="grade">Grade</li>
           <li data-li="age">Age</li>
@@ -91,100 +91,19 @@ padding:30px 30px 30px 30px;
 			</div>
 		</div>
     <div class="lboard_wrap">
-    <div class="lboard_item username" style="display: none;">
+    <div class="lboard_item username">
     <?php
 
 include_once 'Connection.php';
 $sql = "SELECT * FROM `mathresults` ORDER BY score DESC, Username2";
 $result = mysqli_query($conn, $sql);
-$sql2 = "SELECT * FROM `mathresults` ORDER BY score DESC, Grade";
+/* $sql2 = "SELECT * FROM `results` ORDER BY score DESC, Grade";
 $result2 = mysqli_query($conn, $sql2);
-$sql3 = "SELECT * FROM `mathresults` ORDER BY score DESC, Age";
+$sql3 = "SELECT * FROM `results` ORDER BY score DESC, Age";
 $result3 = mysqli_query($conn, $sql3);
-$sql4 = "SELECT * FROM `mathresults` ORDER BY score DESC, State";
-$result4 = mysqli_query($conn, $sql4);
+$sql4 = "SELECT * FROM `results` ORDER BY score DESC, State";
+$result4 = mysqli_query($conn, $sql4); */
 while($data = mysqli_fetch_array($result))
-{
-?>
-          <div class="lboard_mem">
-					<div class="name_bar">
-						<p><?php echo $data['Username2']; ?></p>
-					</div>
-					<div class="points">
-						<?php echo $data['score']; ?>
-					</div>
-          <div class="grade">
-						<?php echo $data['Grade']; ?>
-					</div>
-            <div class="age">
-						<?php echo $data['Age']; ?>
-					</div>
-          <div class="state">
-						<?php echo $data['State']; ?>
-					</div>
-          </div>
-<?php
-}
-?>
-    </div>
-
-    <div class="lboard_item grade" style="display: none;">
-    <?php
-while($data = mysqli_fetch_array($result2))
-{
-?>
-          <div class="lboard_mem">
-					<div class="name_bar">
-						<p><?php echo $data['Username2']; ?></p>
-					</div>
-					<div class="points">
-						<?php echo $data['score']; ?>
-					</div>
-          <div class="grade">
-						<?php echo $data['Grade']; ?>
-					</div>
-            <div class="age">
-						<?php echo $data['Age']; ?>
-					</div>
-          <div class="state">
-						<?php echo $data['State']; ?>
-					</div>
-          </div>
-<?php
-}
-?>
-    </div>
-
-    <div class="lboard_item age" style="display: none;">
-    <?php
-while($data = mysqli_fetch_array($result3))
-{
-?>
-          <div class="lboard_mem">
-					<div class="name_bar">
-						<p><?php echo $data['Username2']; ?></p>
-					</div>
-					<div class="points">
-						<?php echo $data['score']; ?>
-					</div>
-          <div class="grade">
-						<?php echo $data['Grade']; ?>
-					</div>
-            <div class="age">
-						<?php echo $data['Age']; ?>
-					</div>
-          <div class="state">
-						<?php echo $data['State']; ?>
-					</div>
-          </div>
-<?php
-}
-?>
-    </div>
-
-    <div class="lboard_item state" style="display: none;">
-    <?php
-while($data = mysqli_fetch_array($result4))
 {
 ?>
           <div class="lboard_mem">
@@ -213,15 +132,12 @@ while($data = mysqli_fetch_array($result4))
     </div>  
 </div> 
 
-        <script src="leaderboard.js"></script>
-
 <?php mysqli_close($conn); // Close connection ?>
-
 </div>
     </div>
         </section>
       </div>
-      
+
     </div>
   </div>
 </div>

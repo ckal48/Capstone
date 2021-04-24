@@ -19,11 +19,5 @@ tabs.forEach(function(tab){
 			item.style.display = "none";
 		})
 
-		if (currenttab == "username") {
-			username.style.display = "block";
-		} else {
-			username.style.display = "block";
-		} 
-
 	})
 })
