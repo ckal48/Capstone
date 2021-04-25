@@ -1,11 +1,4 @@
 <?php
-require 'PHPMailer/PHPMailer.php';
-require 'PHPMailer/Exception.php';
-require 'PHPMailer/SMTP.php';
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
-use PHPMailer\PHPMailer\SMTP;
 include_once 'Connection.php';
    session_start();
    if($_SESSION['login_user']){
@@ -75,9 +68,18 @@ include_once 'Connection.php';
 							<?php
 							$sql = "SELECT  AVG(score) FROM ssresults WHERE Username2 != '{$_SESSION['login_user']}'";
 							$sql2 = "SELECT score FROM ssresults WHERE Username2 = '{$_SESSION['login_user']}'";
+							$sql3 = "SELECT * FROM ssresults WHERE Username2 = '{$_SESSION['login_user']}'";
                             $result = $conn->query($sql);
 							$result2 = $conn->query($sql2);
+							$result3 = $conn->query($sql3);
                             //display data on web page
+							while($row = mysqli_fetch_array($result3)){
+								echo 'Report'.'</br>'
+								.'Username: '.$row['Username2'].'</br>'
+								.'Age: '.$row['Age'].'</br>'
+								.'Grade: '.$row['Grade'].'</br>'
+								.'State: '.$row['State'].'</br>';
+								}
                              while($row = mysqli_fetch_array($result2)){
                              echo "Your score is ". $row['score'] ." ";
 							 }
@@ -93,13 +95,14 @@ include_once 'Connection.php';
 							Visual Data Goes Here
 						</p>
 						<p>
-							Email Recipient MUST go to security settings in their gmail account and enable access to less secure apps in order to recieve email
-						</p></br></br>
-                        <form action="email.php" method="post">
-                        <label for="input">Email Recipient:</label>
-                        <input type="text" id="input" name="input"/><br><br>
-                       <input type="submit" name="Submit">
-                        </form> 
+						Go Ahead and Take A Screenshot to Send!
+						</p></br>
+						<p>
+						Windows: Windows key + PrtScn
+						</p></br>
+						<p>
+						Mac: Shift-Command-3
+						</p></br>
 
 						</section>
 					</div>
