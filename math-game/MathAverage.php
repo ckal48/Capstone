@@ -85,20 +85,14 @@
                         <p>
 							Visual Data Goes Here
 						</p></br></br>
-
-                        <form method="post">
+						<p>
+							Email Recipient MUST go to security settings in their gmail account and enable access to less secure apps in order to recieve email
+						</p></br></br>
+                        <form action="email.php" method="post">
                         <label for="input">Email Recipient:</label>
                         <input type="text" id="input" name="input"/><br><br>
-                       <input type="submit" name="submit">
+                       <input type="submit" name="Submit">
                         </form> 
-						<?php
-							if(isset($_POST['submit'])) {
-							$to = $_POST['input']; 
-							$subject = "User Results";
-							$message = "Test";
-							mail($to,$subject,$message);
-							}    
-						?>
 
 						</section>
 					</div>

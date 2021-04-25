@@ -1,4 +1,11 @@
 <?php
+require 'PHPMailer/PHPMailer.php';
+require 'PHPMailer/Exception.php';
+require 'PHPMailer/SMTP.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+use PHPMailer\PHPMailer\SMTP;
 include_once 'Connection.php';
    session_start();
    if($_SESSION['login_user']){
@@ -85,6 +92,14 @@ include_once 'Connection.php';
                         <p>
 							Visual Data Goes Here
 						</p>
+						<p>
+							Email Recipient MUST go to security settings in their gmail account and enable access to less secure apps in order to recieve email
+						</p></br></br>
+                        <form action="email.php" method="post">
+                        <label for="input">Email Recipient:</label>
+                        <input type="text" id="input" name="input"/><br><br>
+                       <input type="submit" name="Submit">
+                        </form> 
 
 						</section>
 					</div>
