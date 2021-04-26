@@ -92,8 +92,9 @@ include_once 'Connection.php';
                             </h2></br></br>
 
                         <p>
-							Visual Data Goes Here
+							Visual Data:
 						</p>
+						<iframe width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiNjNkMTRhYzYtYWMwOC00NzQ4LWExN2QtYzI4ZjdkOTM5OTRmIiwidCI6Ijk2NWRlODFjLWZjOTgtNGM1My05OTAxLTQxYmQ5M2UyNmUwNiIsImMiOjN9" frameborder="0" allowFullScreen="true"></iframe>
 						<p>
 						Go Ahead and Take A Screenshot to Send!
 						</p></br>
