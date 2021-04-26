@@ -5,6 +5,31 @@
    }else{
       header("location:../Login.html");
    }
+mysql_select_db("Toolforschool", $con);
+
+ 
+
+$sql="INSERT INTO feedback (firstname, user, suggestion, feed_back)
+
+VALUES
+
+('$_POST[firstname]','$_POST[user]','$_POST[suggestion],'$_POST[feed_back])";
+
+ 
+
+if (!mysql_query($sql,$con))
+
+  {
+
+  die('Error: ' . mysql_error());
+
+  }
+
+echo "1 record added";
+
+ 
+
+mysql_close($con)
 ?>
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -43,10 +68,11 @@
 				<!-- Nav -->
 				<nav id="nav">
 					<ul>
-                            <li class="active"><a href="Feedback.html">Feedback</a></li>
+                            
+							<li><a href="Home.php">Home</a></li>
                             <li><a href="">About</a></li>
                             <li><a href="#">Contacts</a></li>
-                            <li><a href="#">Extra</a></li>
+                            <li class="active"><a href="Feedback.php">Feedback</a></li>
                             <li><a href="Logout.php">Logout</a></li>
 					</ul>
 				</nav>
@@ -71,7 +97,7 @@
 									  <label for="fname">First Name</label>    
 									</div>    
 									<div class="col-75">    
-									  <input type="text" id="fname" name="firstname" placeholder="Your name.."  style="border: 1px solid #555555;box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);">    
+									  <input type="text" id="firstname" name="firstname" placeholder="Your name.."  style="border: 1px solid #555555;box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);">    
 									</div>    
 								  </div>    
 								  <div class="row">    

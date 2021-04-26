@@ -109,7 +109,7 @@
 				font-weight: 200;
 				font-size: 1em;
 				outline: 0;
-				color: rgba(255,255,255,.7);
+				color:indigo;
 			}
 
 
@@ -129,7 +129,7 @@
 				border-radius: 40px;
 				border: 2px solid;
 				border-color: rgba(255,255,255,.8);
-				color: #FFF;
+				color: blue;
 			}
 
 			#nav > ul > li > ul

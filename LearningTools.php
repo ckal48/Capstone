@@ -53,7 +53,7 @@
 						<li class="active"><a href="Home.php">Home</a></li>
 						<li><a href="#">About</a></li>
                         <li><a href="#">Contacts</a></li>
-                        <li><a href="#">Extra</a></li>
+                        <li><a href="../Feedback.php">Feedback</a></li>
                         <li><a href="Logout.php">Logout</a></li>
 					</ul>
 				</nav>

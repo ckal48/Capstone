@@ -46,7 +46,7 @@ include_once 'Connection.php';
                             <li class="active"><a href="EnglishAverage.php">Average</a></li>
                             <li><a href="#">About</a></li>
                             <li><a href="#">Contacts</a></li>
-                            <li><a href="../Feedback.html">Feedback</a></li>
+                            <li><a href="../Feedback.php">Feedback</a></li>
                             <li><a href="../Logout.php">Logout</a></li>
 					</ul>
 				</nav>
