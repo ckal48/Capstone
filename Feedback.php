@@ -1,9 +1,9 @@
 <?php
    session_start();
    if($_SESSION['login_user']){
-      echo "Welcome " . $_SESSION["login_user"];
+      echo "Welcome user " . $_SESSION["login_user"];
    }else{
-      header("location:../Login.html");
+      header("location:Login.html");
    }
 mysql_select_db("Toolforschool", $con);
 
