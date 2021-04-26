@@ -4,32 +4,7 @@ if($_SESSION['login_user']){
    echo "Welcome user " . $_SESSION["login_user"];
 }else{
    header("location:../Login.html");
-   }
-mysql_select_db("Toolforschool", $con);
-
- 
-
-$sql="INSERT INTO feedback (firstname, user, suggestion, feed_back)
-
-VALUES
-
-('$_POST[firstname]','$_POST[user]','$_POST[suggestion],'$_POST[feed_back])";
-
- 
-
-if (!mysql_query($sql,$con))
-
-  {
-
-  die('Error: ' . mysql_error());
-
-  }
-
-echo "1 record added";
-
- 
-
-mysql_close($con)
+}
 ?>
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml">
